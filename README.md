@@ -1,5 +1,5 @@
-# Angular-Node-CURD-demo
- Angular + Node curd demo
+# Angular-Node-CRUD-demo
+ Angular + Node CRUD demo
  Using Angular Material
 
  # Install
