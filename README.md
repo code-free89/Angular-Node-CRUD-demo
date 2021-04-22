@@ -4,17 +4,17 @@
 
  # Install
  
- Frontend : 
+ Frontend (Angular): 
 
- cd angular-material-demo
- npm install
- npm start
+ cd angular-material-demo<br>
+ npm install<br>
+ npm start<br>
 
- Backend :
+ Backend (Node):
 
- cd node-js-server
- npm install
- npm start
+ cd node-js-server<br>
+ npm install<br>
+ npm start<br>
 
 
  # Frontend
