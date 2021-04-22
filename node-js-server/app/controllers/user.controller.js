@@ -7,7 +7,17 @@ exports.create = (req, res) => {
   // Validate request
   if (!req.body.name) {
     res.status(400).send({
-      message: "Content can not be empty!"
+      message: "Name can not be empty!"
+    });
+    return;
+  } else if (!req.body.surname) {
+    res.status(400).send({
+      message: "Surname can not be empty!"
+    });
+    return;
+  } else if (!req.body.age) {
+    res.status(400).send({
+      message: "Age can not be empty!"
     });
     return;
   }

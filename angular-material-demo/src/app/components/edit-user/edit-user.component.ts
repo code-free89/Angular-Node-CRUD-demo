@@ -10,6 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class EditUserComponent implements OnInit {
   currentUser = null;
   message = '';
+  success_message = "";
 
   constructor(
     private userService: UserService,
@@ -36,8 +37,8 @@ export class EditUserComponent implements OnInit {
     this.userService.update(this.currentUser.id, this.currentUser)
       .subscribe(
         response => {
-          const navigationDetails: string[] = [''];
-          this.router.navigate(navigationDetails);
+          // const navigationDetails: string[] = [''];
+          // this.router.navigate(navigationDetails);
           this.message = 'The user was updated successfully!';
         },
         error => {

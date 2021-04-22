@@ -14,6 +14,7 @@ export class AddUserComponent implements OnInit {
     age: 10
   };
   submitted = false;
+  error_message = "";
 
   constructor(private userService: UserService, private router: Router) { }
 
@@ -34,9 +35,11 @@ export class AddUserComponent implements OnInit {
           this.user.surname = response['surname'];
           this.user.age = response['age'];
           this.submitted = true;
+          this.error_message = "";
         },
         error => {
-          console.log(error);
+          console.log(error.error.message);
+          this.error_message = error.error.message;
         });
   }
 

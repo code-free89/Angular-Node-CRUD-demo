@@ -14,6 +14,7 @@ export class UserListComponent implements OnInit {
   currentUser = null;
   currentIndex = -1;
   title = '';
+  submitted = false;
 
   columnsToDisplay: string[] = ['name', 'surname', 'age', 'action'];
   userData: any;

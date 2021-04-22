@@ -1,29 +1,36 @@
 <div *ngIf="currentUser" class="edit-form">
-  <h2>Edit User</h2>
+  <div *ngIf="error_message">
+    <h4 class="text-danger mb-3">{{ error_message }}</h4>
+  </div>
+  <div *ngIf="message">
+    <h4 class="text-success mb-3">{{ message }}</h4>
+  </div>
   <form>
     <div class="form-group">
-      <mat-form-field class="example-full-width">
+      <mat-form-field class="example-full-width" class="w-100">
         <mat-label>Name</mat-label>
-        <input matInput placeholder="Ex. Pizza" value="" type="text" class="form-control" id="name" [(ngModel)]="currentUser.name" name="name" required>
+        <input matInput placeholder="Ex. Pizza" value="" type="text" id="name" [(ngModel)]="currentUser.name" name="name" required>
       </mat-form-field>
     </div>
     <div class="form-group">
-      <mat-form-field class="example-full-width">
+      <mat-form-field class="example-full-width" class="w-100">
         <mat-label>Surname</mat-label>
-        <input matInput placeholder="Ex. Pizza" value="" type="text" class="form-control" id="surname" [(ngModel)]="currentUser.surname" name="surname" required>
+        <input matInput placeholder="Ex. Pizza" value="" type="text" id="surname" [(ngModel)]="currentUser.surname" name="surname" required>
       </mat-form-field>
     </div>
     <div class="form-group">
-      <mat-form-field class="example-full-width">
+      <mat-form-field class="example-full-width" class="w-100">
         <mat-label>Age</mat-label>
-        <input matInput placeholder="10" value="" type="number" class="form-control" id="age" [(ngModel)]="currentUser.age" name="age" required>
+        <input matInput placeholder="10" value="" type="number" id="age" [(ngModel)]="currentUser.age" name="age" required>
       </mat-form-field>
     </div>
   </form>
 
-  <button (click)="updateUser()" mat-raised-button color="primary">Update</button>
-  <button (click)="deleteUser()" mat-raised-button color="warn">Delete</button>
-  <button (click)="backToList()" mat-raised-button color="success">Back</button>
+  <div class="justify-content-between d-flex">
+    <button (click)="updateUser()" mat-raised-button color="primary">Update</button>
+    <button (click)="deleteUser()" mat-raised-button color="accent">Delete</button>
+    <button (click)="backToList()" mat-raised-button color="warn">Back</button>
+  </div>
 </div>
 
 <div *ngIf="!currentUser">
